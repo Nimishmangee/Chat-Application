@@ -10,6 +10,7 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseStorage
 
 class ChatViewController: UIViewController {
 
@@ -92,7 +93,8 @@ class ChatViewController: UIViewController {
                 K.FStore.senderField:messageSender,
                 K.FStore.bodyField:messageBody,
                 K.FStore.dateField:Date().timeIntervalSince1970,
-                K.FStore.nameField:namesOFUsers[messageSender]!
+                
+                K.FStore.nameField:namesOFUsers[messageSender] ?? "Nimish"
             ]) { error in
                 if let e=error{
                     print("There was an issue, \(e)")
@@ -152,24 +154,60 @@ extension ChatViewController:UITableViewDataSource{
         let message=messages[indexPath.row]
         
         
-        let cell=tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        let cell=tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageKaCell
         cell.label.text=messages[indexPath.row].body;
-        cell.leftLabel.text=message.name
-        cell.rightLabel.text=message.name
+//        cell.leftLabel.text=message.name
+//        cell.rightLabel.text=message.name
+        //
+         // Create a reference to the file you want to download
+        let storageRef = Storage.storage().reference()
+        let imageRef = storageRef.child("images/\(message.name)/image.jpg")
+        
+
+         // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+         imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+           if let e = error {
+               print(e)
+               let image1 = UIImage(named: "YouAvatar")
+               let image2 = UIImage(named: "MeAvatar")
+               
+               if message.sender==Auth.auth().currentUser?.email{
+                   cell.rightImageView.image=image2
+                   cell.leftImageView.image=image2
+               }
+               
+               else{
+                   cell.rightImageView.image=image1
+                   cell.leftImageView.image=image1
+               }
+
+           } else {
+               // Data for "images/island.jpg" is returned
+               let image = UIImage(data: data!)
+               cell.rightImageView.image=image
+               cell.leftImageView.image=image
+           }
+         }
+         //
+        
+//        let image = UIImage(named: "YouAvatar")
+        
+//        cell.rightImageView.image=image
+//        cell.leftImageView.image=image
         
         //This is a message from the current user
         if message.sender==Auth.auth().currentUser?.email {
-            cell.leftView.isHidden=true;
-            cell.rightView.isHidden=false;
+            cell.leftImageView.isHidden=true;
+            cell.rightImageView.isHidden=false;
             cell.messageBubble.backgroundColor = #colorLiteral(red: 0.5260234475, green: 0.9091125131, blue: 0.9875254035, alpha: 1)
             cell.label.textColor=UIColor.black
-            cell.rightLabel.text="Me"
+//            cell.rightLabel.text="Me"
         }
         
         //This is a message from other sender
         else{
-            cell.leftView.isHidden=false;
-            cell.rightView.isHidden=true;
+            cell.leftImageView.isHidden=false;
+            cell.rightImageView.isHidden=true;
             cell.messageBubble.backgroundColor = #colorLiteral(red: 0.9271799922, green: 0.9821534753, blue: 0.994110167, alpha: 1)
             cell.label.textColor=UIColor.black
         }
