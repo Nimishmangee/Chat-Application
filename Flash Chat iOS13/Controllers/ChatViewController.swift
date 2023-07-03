@@ -188,12 +188,6 @@ extension ChatViewController:UITableViewDataSource{
                cell.leftImageView.image=image
            }
          }
-         //
-        
-//        let image = UIImage(named: "YouAvatar")
-        
-//        cell.rightImageView.image=image
-//        cell.leftImageView.image=image
         
         //This is a message from the current user
         if message.sender==Auth.auth().currentUser?.email {
