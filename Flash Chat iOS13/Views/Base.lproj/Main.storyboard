@@ -32,7 +32,7 @@
                                     <segue destination="5v2-hE-4Ub" kind="show" id="Sll-0g-P5Z"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7D-jv-BlJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️ਗੱਲਾਂ ਕਰੀਏ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7D-jv-BlJ">
                                 <rect key="frame" x="52" y="418" width="310" height="60"/>
                                 <color key="tintColor" red="0.2235293984" green="0.50980395079999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="823.1884057971015" y="134.59821428571428"/>
         </scene>
-        <!--Flash Chat-->
+        <!--Gallan Kariye-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RegisterViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,7 +179,7 @@
                             <constraint firstItem="c7i-cX-8gy" firstAttribute="bottom" secondItem="3Md-bw-3xo" secondAttribute="bottom" constant="298" id="srI-m1-m9b"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Flash Chat" id="pM9-WB-yYM"/>
+                    <navigationItem key="navigationItem" title="Gallan Kariye" id="pM9-WB-yYM"/>
                     <connections>
                         <outlet property="emailTextfield" destination="gtT-Q1-mXi" id="h08-7V-K2T"/>
                         <outlet property="nameTextField" destination="NLb-U5-NR2" id="b4L-y7-rQ3"/>
@@ -205,7 +205,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="QWh-LN-1WE">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nimish@gmail.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F21-w0-z4z">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="@gmail.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F21-w0-z4z">
                                         <rect key="frame" x="49" y="51" width="317" height="45"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -395,7 +395,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Yv1-Ln-M1b"/>
+        <segue reference="knG-AY-onW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>

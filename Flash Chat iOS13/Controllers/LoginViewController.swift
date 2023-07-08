@@ -1,10 +1,4 @@
-//
-//  LoginViewController.swift
-//  Flash Chat iOS13
-//
-//  Created by Angela Yu on 21/10/2019.
-//  Copyright © 2019 Angela Yu. All rights reserved.
-//
+
 import UIKit
 import FirebaseCore
 import FirebaseFirestore
@@ -21,6 +15,11 @@ class LoginViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
                 if let e=error{
                     print(e)
+                    let alertController = UIAlertController(title: "Authentication Failed", message:e.localizedDescription, preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    
                 }else{
                     self.performSegue(withIdentifier: K.loginSegue, sender: self)
                 }
