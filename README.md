@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/82581324/180593755-83ce022c-a632-437b-928e-8caf68f143e3.png" alt="Icon"/>
 </p>
-<H1 align="center">GroupChat-iOS</H1>
+<H1 align="center">GallanKariye-iOS</H1>
 
 
 ## Description
