@@ -12,9 +12,13 @@ Firebase Firestore will be used as backend service for authentication and storin
 
 The App is built on Model-View-Controller(MVC) Architecture
 
-![RPReplay_Final1688832555](https://github.com/Nimishmangee/GallanKariye-iOS/assets/82581324/a51a9458-2d4d-4a10-99a5-5c2aac344473)
+![RPReplay_Final1688832555](https://github.com/Nimishmangee/GallanKariye-iOS/assets/82581324/e24984c8-bd42-4cbe-b04d-438ba60003fe)
+<br>
+![IMG_C643F686B546-1-2](https://github.com/Nimishmangee/GallanKariye-iOS/assets/82581324/1fa0f7b3-ab8a-4fff-801d-3ebca87e328a)
 
-![IMG_6F814E02CDB6-1](https://user-images.githubusercontent.com/82581324/180595051-4697b1ab-fd0f-49b4-843d-53ba2d199e71.jpg)
+
+
+
 
 
 ## This App will
